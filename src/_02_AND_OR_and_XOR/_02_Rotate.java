@@ -2,6 +2,8 @@ package _02_AND_OR_and_XOR;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Iterator;
+
 import org.junit.jupiter.api.Test;
 
 /*
@@ -29,7 +31,11 @@ import org.junit.jupiter.api.Test;
 public class _02_Rotate {
     
     int rotateLeft(int value, int rotateAmount) {
-        return -1;
+    	String numStr = String. valueOf(value);
+        for (int i = 0; i < rotateAmount; i++) {
+			String firstValue = numStr.substring(i, i+1);
+		}
+		return value;
     }
     
     int rotateRight(int value, int rotateAmount) {
