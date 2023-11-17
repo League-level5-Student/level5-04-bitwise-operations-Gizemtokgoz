@@ -31,15 +31,27 @@ import org.junit.jupiter.api.Test;
 public class _02_Rotate {
     
     int rotateLeft(int value, int rotateAmount) {
-    	String numStr = String. valueOf(value);
-        for (int i = 0; i < rotateAmount; i++) {
-			String firstValue = numStr.substring(i, i+1);
-		}
-		return value;
+    	int i = value;
+        i = i << rotateAmount;
+        String toString = Integer.toBinaryString(value);
+        String cutPart = toString.substring(0, rotateAmount);
+        System.out.println(cutPart);
+        int added = Integer.parseInt(cutPart);
+        int result = (i | added);
+        return result;
+
     }
     
     int rotateRight(int value, int rotateAmount) {
-        return -1;
+    	int i = value;
+        i = i >> rotateAmount;
+        String toString = Integer.toBinaryString(value);
+        String cutPart = toString.substring(0, rotateAmount);
+        System.out.println(cutPart);
+        int added = Integer.parseInt(cutPart);
+        int result = (i | added);
+        return result;
+        
     }
     
     @Test
