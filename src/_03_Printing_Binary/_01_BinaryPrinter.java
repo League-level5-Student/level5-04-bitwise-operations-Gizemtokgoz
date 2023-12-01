@@ -12,18 +12,19 @@ public class _01_BinaryPrinter {
         // We first want to print the bit in the one's place
 
         // Shift b seven bits to the right
-
+    	int bee = b >> 7;
         // Use the & operator to "mask" the bit in the one's place
         // This can be done by "anding" (&) it with the value of 1
 
         // Print the result using System.out.print (NOT System.out.println)
-
+    	System.out.print(bee);
         //Use this method to print the remaining 7 bits of b
     }
 
     public void printShortBinary(short s) {
         // Create 2 byte variables
-
+    	byte first;
+    	byte second;
         // Use bit shifting and masking (&) to save the first
         // 8 bits of s in one byte, and the second 8 bits of
         // s in the other byte
@@ -34,7 +35,8 @@ public class _01_BinaryPrinter {
 
     public void printIntBinary(int i) {
         // Create 2 short variables
-
+    	short one;
+    	short two;
         // Use bit shifting and masking (&) to save the first
         // 16 bits of i in one short, and the second 16 bits of
         // i in the other short

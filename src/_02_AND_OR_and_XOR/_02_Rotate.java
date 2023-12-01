@@ -36,7 +36,8 @@ public class _02_Rotate {
         String toString = Integer.toBinaryString(value);
         String cutPart = toString.substring(0, rotateAmount);
         System.out.println(cutPart);
-        int added = Integer.parseInt(cutPart);
+        
+        int added = (int) (Math.pow(2, cutPart.length())-1);
         int result = (i | added);
         return result;
 
@@ -46,9 +47,9 @@ public class _02_Rotate {
     	int i = value;
         i = i >> rotateAmount;
         String toString = Integer.toBinaryString(value);
-        String cutPart = toString.substring(0, rotateAmount);
+        String cutPart = toString.substring(toString.length()-rotateAmount, toString.length());
         System.out.println(cutPart);
-        int added = Integer.parseInt(cutPart);
+        //int added = (int) (Math.pow(2, cutPart.length())-1);
         int result = (i | added);
         return result;
         
