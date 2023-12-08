@@ -10,7 +10,7 @@ public class _01_BinaryPrinter {
 
     public void printByteBinary(byte b) {
         // We first want to print the bit in the one's place
-
+    	System.out.println(b[0]);
         // Shift b seven bits to the right
     	int bee = b >> 7;
         // Use the & operator to "mask" the bit in the one's place

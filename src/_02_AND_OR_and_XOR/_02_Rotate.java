@@ -46,11 +46,18 @@ public class _02_Rotate {
     int rotateRight(int value, int rotateAmount) {
     	int i = value;
         i = i >> rotateAmount;
-        String toString = Integer.toBinaryString(value);
-        String cutPart = toString.substring(toString.length()-rotateAmount, toString.length());
-        System.out.println(cutPart);
-        //int added = (int) (Math.pow(2, cutPart.length())-1);
-        int result = (i | added);
+        
+        String fullString = Integer.toBinaryString(value);
+        int newi = value << 32-rotateAmount;
+        //String cutString = fullString.substring(fullString.length()-rotateAmount, fullString.length());
+        //String untouched = restString.substring(0, restString.length()-cutString.length());
+        
+        //int end = (int) (Math.pow(2, cutString.length())-1);
+        //int first = (int) (Math.pow(2, untouched.length())-1);
+        System.out.println(newi);
+        System.out.println(i);
+        int result = (i | newi);
+        
         return result;
         
     }
