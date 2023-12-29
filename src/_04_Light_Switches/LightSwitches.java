@@ -55,6 +55,9 @@ public class LightSwitches implements GameControlScene {
      * index = 6        // return true if pink is on (bit 6 == 1)
      */
     boolean isLightOn(int index) {
+    	if (index == 1) {
+    		return true;
+    	}
         return false;
     }
     
@@ -63,7 +66,7 @@ public class LightSwitches implements GameControlScene {
      * index = 4        // turn off yellow only (set bit 4 = 1)
      */
     void turnLightOn(int index) {
-        
+        index = 1;
     }
     
     /*
@@ -71,7 +74,7 @@ public class LightSwitches implements GameControlScene {
      * index = 0        // turn off blue only (set bit 0 = 0)
      */
     void turnLightOff(int index) {
-        
+        index = 0;
     }
     
     /*
