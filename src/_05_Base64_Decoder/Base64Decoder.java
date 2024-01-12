@@ -11,7 +11,7 @@ import java.util.Arrays;
  * in the array. For example,
  *      0 -> 'A'    // 'A' is at index 0 in the array, so 0 maps to 'A'
  *      1 -> 'B'    // 'B' is at index 1 in the array, so 1 maps to 'B'
- *      2 -> 'C'    // 'C' is at index 1 in the array, so 2 maps to 'C'
+ *      2 -> 'C'    // 'C' is at index 2 in the array, so 2 maps to 'C'
  *      ...
  *      63 -> '/'   // '/' is at index 63 in the array, so 63 maps to '/'
  * 
