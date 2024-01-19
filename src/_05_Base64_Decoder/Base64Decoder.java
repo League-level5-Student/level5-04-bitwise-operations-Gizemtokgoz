@@ -1,6 +1,7 @@
 package _05_Base64_Decoder;
 
 import java.util.Arrays;
+import java.util.Base64;
 
 /*
  * Base 64 is a way of encoding binary data using text.
@@ -58,23 +59,34 @@ public class Base64Decoder {
     //1. Complete this method so that it returns the index in
     //   the base64Chars array that corresponds to the passed in char.
     public static byte convertBase64Char(char c){
-    	Byte b = (byte) Arrays.toString(base64Chars).indexOf(c);
-        return b;
+    	byte ind = 0;
+    	for (int i = 0; i < base64Chars.length; i++) {
+			if (base64Chars[i] == c) {
+				ind = (byte) i;
+			}
+		}
+    	return ind;
     }
 
     //2. Complete this method so that it will take in a string that is 4
     //   characters long and return an array of 3 bytes (24 bits). The byte
     //   array should be the binary value of the encoded characters.
     public static byte[] convert4CharsTo24Bits(String s){
-    	int sInt = Integer.parseInt(s);
-    	toBinaryString(int sInt);
-    	byte[] byteArr = s.getBytes();
-        return null;
+    	byte[] byt = s.getBytes();
+    	byte[] fullBytes = new byte[3];
+    	fullBytes[0] = (byte) (byt[0] | (byt[1]&(3))<<6);
+    	fullBytes[1] = (byte) (byt[1]>>2 | byt[2]&(3)<<4);
+    	fullBytes[2] = (byte) (byt[2]>>6 | byt[2]&(3)<<2);
+    	return fullBytes;
     }
 
     //3. Complete this method so that it takes in a string of any length
     //   and returns the full byte array of the decoded base64 characters.
-    public static byte[] base64StringToByteArray(String file) {
-        return null;
+    public static byte[] base64StringToByteArray(String file) { 
+    	byte[] byt = file.getBytes();
+    	byte[] fullBytes = new byte[3];
+    	for (int i = 0; i < file.length(); i++) {
+			
+		}
     }
 }
